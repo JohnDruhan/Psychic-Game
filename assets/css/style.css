@@ -1,4 +1,3 @@
-/*This CSS will override everything, including Bootstrap*/
 
 body {
 	background: wheat;
@@ -8,18 +7,6 @@ h1 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 50px;
 	color: black;
-}
-
-/*to make a portion of the h1 header smaller*/
-#smaller-font {
-	font-size: 45px;
-}
-
-/*to undo default border-bottom and margin-top styling for .page-header
-in Bootstrap*/
-.page-header {
-	border-bottom: 0 black;
-	margin-top: 0;
 }
 
 h3 {
@@ -43,7 +30,7 @@ p {
 	text-align: center;
 	height: 20px;
 	padding-top: 5px;
-	background-color: aliceblue
+	background-color: wheat;
 }
 
 .footer p {

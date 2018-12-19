@@ -5,7 +5,7 @@ var guessesLeft = 9;
 var yourGuess = []; 
 var computerChoice;
 
-//to initiate the game
+//to start the game
 theGame();
 
 function theGame() {
@@ -22,22 +22,21 @@ function theGame() {
 
 		document.onkeyup = function(event) {
 
-			//turns user's unicode into corresponding alphanumeric key,
-			//then turns it into a lowercase string.
+			// turns user's choice into a lowercase string.
 			var userChoice = String.fromCharCode(event.keyCode).toLowerCase();
 
 
-			//if statement to prevent user from choosing a key that's not part of
-			//the alphabet. a = unicode 65, z = unicode 90.
+			// prevent user from choosing a key that's not part of
+			//the alphabet.
 			if (event.keyCode < 65 || event.keyCode > 90) {
 				alert("Invalid Entry");
 
-			//else/if statement to stop user from guess a letter they already guessed
-			//and to stop the guesses counter from being deducted for a previous guess
+			// stop user from guess a letter they already guessed
+			// and to stop the guesses counter from being deducted 
 			} else if (yourGuess.indexOf(userChoice) >=0) {
 				alert("You already guessed that!");
 
-			//if the user guesses correctly
+			//if guess correctly
 			} else if (userChoice === computerChoice) {
 				console.log("You win."); //test
 				
@@ -45,7 +44,7 @@ function theGame() {
 				document.getElementById("your-wins").innerHTML = wins;
 				resetGame();
 
-			//if the user guesses wrong...
+			//if guess wrong...
 			} else {
 				guessesLeft = guessesLeft - 1;
 				
